@@ -1,0 +1,159 @@
+.contact{
+    width: 100%;
+    max-width: 1362px;
+    margin: 0 auto;
+    height: 450px;
+    border: 1px solid #C1C1C1;
+    border-radius: 2px;
+    padding: 0px 40px;
+    margin-top: 130px;
+    margin-bottom: 130px;
+    @include flex(space-between, center, row);
+    .number{
+        width: 466px;
+        height: 290px;
+        @include flex(space-between, start, column);
+        span{
+            font-size: $font-main;
+            font-weight: $font-weight;
+            color: #3A4052;
+            text-transform: uppercase;
+        }
+        p{
+            width: 344px;
+            font-size: $font-size;
+            color: #3A4052BF;
+            letter-spacing: 0.5px;
+            padding: 25px 0px;
+        }
+        button{
+            width: 223px;
+            height: 50px;
+            background-color: #14509D;
+            color: white;
+            border-radius: 20px;
+            border: none;
+        }
+    }
+    .form{
+        .main-inputs{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            .input-1{
+                width: 350px;
+                height: 50px;
+                padding: 15px 20px;
+                border: 1px solid grey;
+                border-radius: 5px;
+                input:last-of-type {
+                    margin-right: 0; 
+                }
+            }
+        }
+        .main-input-2{
+            padding-top: 15px;
+            padding-bottom: 22px;
+            .input-2{
+                width: 100%;
+                height: 105px;
+                border: 1px solid grey;
+                border-radius: 5px;
+            }
+        }
+        .btn{
+            width: 100%;
+            height: 50px;
+            border: 2px solid #14509D;
+            background: transparent;
+            color: #14509D;
+            border-radius: 5px;
+            font-weight: $font-weight;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contact{
+        width: 100%;
+        max-width: 320px;
+        height: 450px;
+        border: none;
+        padding: 0px 0px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: block;
+        .number{
+            width: 100%;
+            display: block;
+            height: auto;
+            span{
+                font-size: 14px;
+                font-weight: $font-weight;
+                color: #3A4052;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 10px;
+                color: #3A4052BF;
+                letter-spacing: 0.5px;
+                width: 100%;
+                max-width: 320px;
+                padding: 20px 0px;
+            }
+            button{
+                width: 115px;
+                height: 22px;
+                background-color: #14509D;
+                color: white;
+                border-radius: 20px;
+                border: none;
+                font-size: 9px;
+            }
+        }
+        .form{
+            width: 100%;
+            max-width: 320px;
+            padding: 15px 0px;
+            .main-inputs{
+                padding: 5px 0px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .input-1{
+                    width: 100%;
+                    max-width: 320px;
+                    height: 40px;
+                    padding: 10px 15px;
+                    margin-right: 0px;
+                    border: 1px solid grey;
+                    border-radius: 5px;
+                    input:last-of-type {
+                        margin-right: 0; 
+                    }
+                }
+            }
+            .main-input-2{
+                padding-bottom: 10px;
+                padding-top: 5px;
+                .input-2{
+                    width: 100%;
+                    max-width: 320px;
+                    height: 75px;
+                    border: 1px solid grey;
+                    border-radius: 5px;
+                }
+            }
+            .btn{
+                width: 100%;
+                max-width: 320px;
+                height: 40px;
+                border: 2px solid #14509D;
+                background: transparent;
+                color: #14509D;
+                border-radius: 5px;
+                font-weight: $font-weight;
+            }
+        }
+    }
+}

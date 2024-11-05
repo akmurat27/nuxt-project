@@ -1,0 +1,145 @@
+
+    .news{
+        @include flex(space-between, center, row);
+        width: 80%;
+        margin: auto;
+        margin-top: 5rem;
+        .habar{
+            font-size: $font-main;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #3A4052;
+        }
+        .gradient{
+            width: 250px;
+            height: 8px;
+            background: linear-gradient(to right, rgba(20, 80, 157, 1), rgba(29, 87, 161, 0.5), rgba(227, 234, 243, 0.1));
+        } 
+    }
+.cards{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    .card-item{
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        @include flex(center, start, column);
+        width: 380px;
+        height: auto;
+        span{
+            padding: 20px 20px;
+            font-size: $font-size;
+            text-align: justify;
+        }
+        p{
+            padding: 0px 20px;
+            padding-bottom: 20px;
+            text-align: justify;
+        }
+        img{
+            width: 380px;
+            height: auto;
+        }
+    }
+    .card-item-1{
+        display: block;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        @include flex(center, start, column);
+        width: 380px;
+        height: auto;
+        span{
+            padding: 20px 20px;
+            font-size: $font-size;
+            text-align: justify;
+        }
+        p{
+            padding: 0px 20px;
+            padding-bottom: 20px;
+            text-align: justify;
+        }
+        img{
+            width: 380px;
+            height: auto;
+        }
+    }
+    .card-item-2{
+        display: block;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        @include flex(center, start, column);
+        width: 380px;
+        height: auto;
+        span{
+            padding: 20px 20px;
+            font-size: $font-size;
+            text-align: justify;
+        }
+        p{
+            padding: 0px 20px;
+            padding-bottom: 20px;
+            text-align: justify;
+        }
+        img{
+            width: 380px;
+            height: auto;
+        }
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .news{
+        @include flex(space-between, center, row);
+        width: 100%;
+        max-width: 321px;
+        margin: auto;
+        margin-top: 40px;
+        .habar{
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #3A4052;
+        }
+        .gradient{
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, rgba(20, 80, 157, 1), rgba(29, 87, 161, 0.5), rgba(227, 234, 243, 0.1));
+        }
+        span{
+            font-size: 10px;
+        }
+    }
+    .cards{
+        width: 100%;
+        max-width: 321px;
+        margin-top: 20px;
+        @include flex(center, center, row);
+        .card-item{
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+            @include flex(center, start, column);
+            width: 100%;
+            max-width: 284px;
+            height: auto;
+            span{
+                padding: 15px 18px;
+                font-size: 12px;
+                text-align: justify;
+                font-weight: $font-weight;
+            }
+            p{
+                padding: 0px 18px;
+                padding-bottom: 18px;
+                text-align: justify;
+                font-size: 10px;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .cards .card-item-1,
+    .cards .card-item-2 {
+    display: none;
+    }
+}

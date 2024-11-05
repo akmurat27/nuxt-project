@@ -1,0 +1,189 @@
+.management{    
+    width: 80%;
+    margin: auto;
+    margin-top: 120px;
+    span{
+        font-size: $font-main;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #3A4052;
+    }
+    .gradient{
+        width: 390px;
+        height: 8px;
+        background: linear-gradient(to right, rgba(20, 80, 157, 1), rgba(29, 87, 161, 0.5), rgba(227, 234, 243, 0.1));
+    }
+    p{
+        color: #3A4052;
+        font-size: $font-size;
+        margin-top: 25px;
+    }
+}
+.management-main{
+    width: 80%;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 130px;
+    span{
+        color: #3A4052;
+        font-size: 35px;
+        font-weight: 700;
+    }
+    .num{
+        width: 100%;
+        max-width: 659px;
+        @include flex(space-between, start, row);
+        margin-top: 20px;
+        span{
+            font-size: 28px;
+            color: $secondary;
+            font-weight: 400;
+        }
+        p{
+            color: $secondary;
+            font-size: 28px;
+        }
+    }
+    .manager-images{
+        @include flex(start, start, row);
+        margin-top: 45px;
+        .image-div{
+            width: 281px;
+            height: 470px;
+            margin-right: 80px;
+            background-color: $secondary;
+            border-top: 5px solid $secondary;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;  
+            position: relative; 
+            img{
+                position: absolute;
+                left: 1px;
+                right: 0;
+                top: 0;
+            }
+            .manager-names{
+                position: absolute;
+                color: white;
+                font-size: 23px;
+                text-align: center;
+                top: 65%;
+                .manager-ars{
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+                p{
+                    color:white;
+                }
+                .white-line{
+                    background-color: white;
+                    height: 3px;
+                    width: auto;
+                    margin-bottom: 8px;
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+    .managers-bottom{
+        margin-top: 100px;
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .management{    
+        width: 80%;
+        margin: auto;
+        margin-top: 120px;
+        span{
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #3A4052;
+        }
+        .gradient{
+            width: 137px;
+            height: 3px;
+            background: linear-gradient(to right, rgba(20, 80, 157, 1), rgba(29, 87, 161, 0.5), rgba(227, 234, 243, 0.1));
+        }
+        p{
+            color: #3A4052;
+            font-size: 10px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+    }
+    .management-main{
+        width: 80%;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        span{
+            color: #3A4052;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .num{
+            width: auto;
+            @include flex(start, start, row);
+            margin-top: 20px;
+            span{
+                font-size: 12px;
+                color: $secondary;
+                font-weight: 400;
+            }
+            p{
+                font-size: 12px;
+                color: $secondary;
+                margin-left: 15px;
+            }
+        }
+        .manager-images{
+            @include flex(center, center, column);
+            margin-top: 20px;
+            .image-div{
+                width: 281px;
+                height: 470px;
+                margin-right: 0px;
+                background-color: $secondary;
+                border-top: 5px solid $secondary;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                margin-bottom: 20px;  
+                position: relative; 
+                img{
+                    position: absolute;
+                    left: 1px;
+                    right: 0;
+                    top: 0;
+                }
+                .manager-names{
+                    position: absolute;
+                    color: white;
+                    font-size: 23px;
+                    text-align: center;
+                    top: 65%;
+                    .manager-ars{
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    p{
+                        color:white;
+                    }
+                    .white-line{
+                        background-color: white;
+                        height: 3px;
+                        width: auto;
+                        margin-bottom: 8px;
+                        margin-top: 14px;
+                    }
+                }
+            }
+        }
+        .managers-bottom{
+            margin-top: 45px;
+    
+        }
+    }
+}

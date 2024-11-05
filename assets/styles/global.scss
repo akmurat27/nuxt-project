@@ -1,0 +1,62 @@
+// colors
+$font-color : #3A4052;
+$text-color: white;
+$contact-table: #6B707D;
+$secondary: #14509D;
+
+// nav colors
+$primary: #0c2f4c;
+$white-color: #8b8b8b;
+
+//text
+$font-size: 20px;
+$font-main: 40px;
+$font-weight: bold;
+// text sizes
+$header: 40px;
+$text: 22px;
+$link: 18px;
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+@mixin flex($justify, $align, $direction){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@import 'heropage';
+@import 'navbar';
+@import 'swiper';
+@import 'infopage';
+@import 'habarlar';
+@import 'playvideo';
+@import 'about';
+@import 'hyzmatlarymyz';
+@import 'hyzmatdaslar';
+@import 'contact';
+@import 'footerpage';
+@import 'about-company';
+@import 'achieve';
+@import 'media';
+@import 'manager';
+@import 'hyzmatlar';
+@import 'tazelikler';
+@import 'tazeliklerici';
+@import 'map';
+@import 'nav-burger'

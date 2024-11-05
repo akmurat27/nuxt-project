@@ -1,0 +1,285 @@
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 30;
+    @include flex(center, space-between, column);
+    border-bottom: 1px solid #eeeeee;
+    transition: all 0.3s ease;
+    letter-spacing: 0.8px;
+  }
+  
+  .nav-page {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 30;
+    @include flex(center, center, row);
+    border-bottom: 1px solid $primary;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  .nav-inner {
+    width: 80%;
+    margin: auto;
+    padding: 10px 10px;
+    @include flex(space-between, center, row);
+  }
+  
+  .nav-logo {
+    @include flex(center, center, row);
+    img {
+      width: 153px; 
+      height: 62px
+    }
+  }
+  
+  .nav-links {
+    list-style: none;
+    @include flex(space-evenly, center, row);
+    width: 100%;
+    font-size: $link;
+    position: relative;
+    li {
+      .nav-link-page {
+        text-decoration: none;
+        color: $primary;
+        
+        &:hover {
+          color: $secondary;
+          transition: 0.3s all ease;
+        }
+      }
+      .nav-link {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          color: $secondary;
+          transition: 0.3s all ease;
+        }
+        .main-line{
+          border-bottom: 3px solid white;
+          &:hover {
+            color: $secondary;
+            transition: 0.3s all ease;
+            border-bottom: 3px solid $secondary;
+          }
+        }
+      }
+      .active-nav-link{
+        color: $secondary;
+      }
+    }
+  }
+  
+  .nav-btn {
+    @include flex(center, center, row);
+    gap: 20px;
+    .nav-link {
+      text-decoration: none;
+      color: #fff;
+      &:hover {
+        color: $secondary;
+        transition: 0.3s all ease;
+      }
+    }
+    .lang {
+      position: relative;
+      font-size: $link;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      
+      .comp-line{
+        border-bottom: 1px solid #3A4052;
+        margin: 10px 0px;
+      }
+      
+      .curr-lang {
+        @include flex(center, center, row);
+        gap: 3px;
+        padding: 5px 0px;
+      }
+      &:hover {
+        .lang-dropdown {
+          display: block;
+          height: fit-content;
+          opacity: 1;
+          transition: 0.3s all ease;
+          top: 30px;
+          background: $text-color;
+          .line{
+            border-bottom: 1px solid #3A4052;
+            margin: 5px 0px;
+          }
+          a {
+            color: #3A4052;
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+      }
+      .lang-dropdown {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        border-radius: 3px;
+        opacity: 0;
+        padding: 10px;
+        a {
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+  .nav-btn-drop{
+    .lang-drop-inner{
+      .curr-lang-drop{
+        @include flex(center, center, row);
+        gap: 3px;
+        padding: 5px 0px;
+        .nav-link{
+          text-decoration: none;
+          color: white;
+          &:hover{
+            color: $secondary;
+            transition: 0.3s all ease;
+          }
+        }
+      }
+      &:hover{
+        .lang-drop {
+          display: block;
+          opacity: 1;
+          transition: 0.3s all ease;
+          top: 30px;
+          background: $text-color;
+          a {
+            color: #3A4052;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+          }
+        }
+      }
+      .comp-line{
+        border-bottom: 1px solid #3A4052;
+        margin: 10px 0px;
+      }
+      .lang-drop {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        position: absolute;
+        border-radius: 3px;
+        opacity: 0;
+        width: 215px;
+        height: auto;
+        padding: 10px;
+        a {
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+  .navbar_scrolled .active-nav-link a{
+    color: $secondary;
+  }
+  .navbar_scrolled .nav-btn a{
+    color: #3A4052;
+    font-weight: 500; 
+  }
+  .navbar_scrolled .nav-links .nav-link .main-line{
+    border-bottom: 3px solid #3A4052;
+  }
+  .navbar_scrolled .nav-links .nav-link{
+    color: #3A4052;
+    font-weight: 500;
+    &:hover{
+      color: $secondary;
+    }
+  }
+  .navbar_scrolled{
+    background-color: white;
+  }
+  .navbar_scrolled .nav-btn-drop .nav-link{
+    color: #3A4052 !important;
+    &:hover{
+      color: $secondary !important;
+    }
+  }
+  .company-navbar .nav{
+    background-color: white;
+    .nav-link{
+      color: #3A4052;
+      font-weight: 500;
+      &:hover {
+        color: $secondary;
+        transition: 0.3s all ease;
+      }
+    }
+    .nav-btn{
+      a{
+      color: #3A4052;
+      }
+    }
+    .nav-btn-drop{
+      .nav-link{
+        color: #3A4052;
+      }
+      .active-nav-link{
+        border-bottom: 3px solid $secondary;
+        color: $secondary;
+      }
+    }
+    .active-nav-link .nav-link{
+      border-bottom: 3px solid $secondary;
+      color: $secondary;
+    }
+  }
+
+@media screen and (max-width: 425px) {
+
+.nav{
+  width: 100%;  
+}
+.nav-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
+  padding: 15px 20px;
+  width: 100%;
+}
+.container{
+  width: 100%;
+}
+
+.nav-logo{
+  margin-left: 90px;
+  img{
+    width: 99px;
+    height: 40px;
+  }
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-btn {
+  .lang {
+    display: none;
+  }
+}
+}

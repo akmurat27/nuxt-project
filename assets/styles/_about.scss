@@ -1,0 +1,112 @@
+.about{
+    position: relative;
+    @include flex(center, center, row);
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .gradient{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(20, 80, 157, 0.5), rgba(29, 87, 161, 0.9));
+    }
+    .image-text {
+        @include flex(center, center, row);
+        position: absolute;
+        width: 100%;
+        max-width: 1287px;
+        height: 100%;
+        max-height: 300px;
+        gap: 77px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 1;
+        text-align: center;
+        .inner-items{
+            @include flex(center, center, column);
+            width: 264px;
+            height: 207px;
+            .special-1{
+                width: 99px;
+                height: 110px;
+            }
+            .special-2{
+                width: 120px;
+                height: 95px;
+            }
+            img{
+                width: 155px;
+                height: 95px;
+            }
+            .main-text{
+                font-size: $font-main;
+                padding: 12px 0px;
+                font-weight: $font-weight;
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 425px) {
+    .about{
+        position: relative;
+        margin-top: 40px;
+        width: 100%;
+        height: 200px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gradient{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(20, 80, 157, 0.5), rgba(29, 87, 161, 0.9));
+        }
+        .image-text {
+            position: absolute;
+            width: 100%;
+            max-width: 360px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            height: auto; /* Make sure container has height for vertical alignment */
+            gap: 15px;
+            .inner-items{
+                @include flex(center, center, row);
+                flex-wrap: wrap;
+                padding-bottom: 0px;
+                width: 83px;
+                height: auto;
+                margin: auto;
+                .special-1{
+                    width: 38px;
+                    height: 30px;
+                }
+                .special-2{
+                    width: auto;
+                    height: 30px;
+                }
+                img{
+                    width: auto;
+                    height: 30px;
+                }
+                .main-text{
+                    font-size: 20px;
+                    padding: 5px 0px;
+                    font-weight: $font-weight;
+                }
+                span{
+                    font-size: 7px;
+                }
+            }
+        } 
+    }
+}

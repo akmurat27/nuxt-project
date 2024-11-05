@@ -1,0 +1,72 @@
+.achieve{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    .gradient{
+        width: 590px;
+        height: 8px;
+        background: linear-gradient(to right, rgba(20, 80, 157, 1), rgba(29, 87, 161, 0.5), rgba(227, 234, 243, 0.1));
+    }   
+    span{
+        font-size: $font-main;
+        text-transform: uppercase;
+    }
+}
+.achieve-images{
+    @include flex(center, center, row);
+    padding-top: 25px;
+    height: 420px;
+    .img{
+        width: 270px;
+        height: 382px;
+        padding: 0px 10px;
+    }
+    .img-1{
+        padding: 0px 10px;
+    }
+}
+.achieves{
+    width: 100%;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 425px) {
+    .achieve{    
+        width: 80%;
+        margin: auto;
+        position: relative;
+        .gradient{
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(to right, rgba(20, 80, 157, 1), rgba(29, 87, 161, 0.5), rgba(227, 234, 243, 0.1));
+        }   
+        span{
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+    .achieve-images{
+        display: block;
+        padding-top: 25px;
+        width: 50%;
+        margin: auto;
+        height: auto;
+        .img{
+            width: 166px;
+            height: 236px;
+            padding: 0px 10px;
+        }
+    }
+    .achieves{
+        margin: 40px 0px;
+
+        .achieve-images .img-1 {
+            display: none;
+        }
+        .achieve-images .disp-none{
+            display: none;
+        }
+    }
+}
